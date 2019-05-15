@@ -80,10 +80,12 @@ public class Logic {
                     v++;
                 }
             }
-            if (v == 5 || h == 5) {
+            if (v == table[0].length || h == table[0].length) {
                 result = true;
                 break;
             }
+            h = 0;
+            v = 0;
         }
         return result;
     }
