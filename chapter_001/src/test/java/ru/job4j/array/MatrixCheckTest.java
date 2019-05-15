@@ -28,4 +28,30 @@ public class MatrixCheckTest {
         boolean result = check.mono(input);
         assertThat(result, is(false));
     }
+
+    @Test
+    public void whenDataMonoByTrueThenTrueForEven() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = new boolean[][] {
+                {true, true, true, true},
+                {false, true, true, false},
+                {true, true, true, false},
+                {true, false, true, true}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(true));
+    }
+
+    @Test
+    public void whenDataNotMonoByTrueThenFalseForEven() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = new boolean[][] {
+                {true, true, true, true},
+                {false, false, true, false},
+                {true, true, true, false},
+                {true, false, true, true}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(false));
+    }
 }
