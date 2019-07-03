@@ -64,14 +64,27 @@ public class Tracker {
     }
 
     public Item[] findByName(String key) {
-        Item[] result = new Item[100];
-        int j = 0;
+        Item[] itemsNew = new Item[100];
+        char[] itemChar = key.toCharArray();
+        int k = 0;
         for (Item item : this.items) {
-            if(item.getName().equals(key)) {
-                result[j++] = item;
+            if (item == null) {
+                continue;
+            }
+            boolean res = true;
+            char[] chars = item.getName().toCharArray();
+            for (int j = 0; j < itemChar.length; j++) {
+                if (itemChar[j] != chars[j]) {
+                    res = false;
+                    break;
+                }
+            }
+            if (res) {
+                itemsNew[k] = item;
+                k++;
             }
         }
-        return result;
+        return Arrays.copyOf(itemsNew, k);
     }
 
     public boolean replace(String id, Item item) {
