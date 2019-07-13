@@ -30,12 +30,22 @@ public class StartUI {
 
     /**
      * Конструтор инициализирующий поля.
-     * @param input ввод данных.
+     *
+     * @param input   ввод данных.
      * @param tracker хранилище заявок.
      */
     public StartUI(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
+    }
+
+    /**
+     * Запускт программы.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        new StartUI(new ConsoleInput(), new Tracker()).init();
     }
 
     /**
@@ -49,7 +59,7 @@ public class StartUI {
             if (ADD.equals(answer)) {
                 //добавление заявки вынесено в отдельный метод.
                 this.createItem();
-                } else if (EDIT.equals(answer)) {
+            } else if (EDIT.equals(answer)) {
                 this.editItem();
             } else if (DELETE.equals(answer)) {
                 this.deleteItem();
@@ -130,13 +140,5 @@ public class StartUI {
         } else {
             System.out.println("------------ Заявка с таким id не найдена --------------");
         }
-    }
-
-    /**
-     * Запускт программы.
-     * @param args
-     */
-    public static void main(String[] args) {
-        new StartUI(new ConsoleInput(), new Tracker()).init();
     }
 }

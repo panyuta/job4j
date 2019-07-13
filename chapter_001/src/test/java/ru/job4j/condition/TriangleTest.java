@@ -1,11 +1,9 @@
 package ru.job4j.condition;
 
-import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.experimental.categories.Categories;
 
 import static org.hamcrest.number.IsCloseTo.closeTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 
 public class TriangleTest {

@@ -1,6 +1,6 @@
 package ru.job4j.profession;
 
-import java.util.*;
+import java.util.Date;
 
 public class Profession {
     private String name;
@@ -22,8 +22,19 @@ public class Profession {
         this.education = education;
     }
 
-    public String getName() {return this.name;}
-    public String getSurname() {return this.surname;}
-    public Date getBirthday() {return this.birthday;}
-    public Education getEducation() {return this.education;}
+    public String getName() {
+        return this.name;
+    }
+
+    public String getSurname() {
+        return this.surname;
+    }
+
+    public Date getBirthday() {
+        return this.birthday;
+    }
+
+    public Education getEducation() {
+        return this.education;
+    }
 }

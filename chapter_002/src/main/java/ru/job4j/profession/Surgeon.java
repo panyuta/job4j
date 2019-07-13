@@ -11,5 +11,6 @@ public class Surgeon extends Doctor {
         this.scope = scope;
     }
 
-    public void operate(Patient patient) {}
+    public void operate(Patient patient) {
+    }
 }

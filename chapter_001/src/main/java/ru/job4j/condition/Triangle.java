@@ -1,7 +1,5 @@
 package ru.job4j.condition;
 
-import static java.lang.Math.sqrt;
-
 public class Triangle {
     private Point first;
     private Point second;
@@ -15,9 +13,9 @@ public class Triangle {
 
     /**
      * Метод вычисления периметра по длинам сторон.
-     *
+     * <p>
      * Формула.
-     *
+     * <p>
      * (a + b + c) / 2
      *
      * @param a расстояние между точками a b
@@ -31,11 +29,11 @@ public class Triangle {
 
     /**
      * Метод должен вычислить площадь треугольника.
-     *
+     * <p>
      * Формула.
-     *
+     * <p>
      * √ p *(p - ab) * (p - ac) * (p - bc)
-     *
+     * <p>
      * где √ - корень квадратный, для извлечения корня использовать метод Math.sqrt().
      *
      * @return Вернуть площадь, если треугольник существует или -1.
@@ -55,7 +53,7 @@ public class Triangle {
 
     /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
-     *
+     * <p>
      * Подумайте какое надо написать условие, чтобы определить можно ли построить треугольник.
      *
      * @param a Длина от точки a b.
@@ -64,6 +62,6 @@ public class Triangle {
      * @return
      */
     private boolean exist(double ab, double ac, double bc) {
-       return (((ab + bc) > ac) && ((ab + ac) > bc) && ((ac + bc) > ab));
+        return (((ab + bc) > ac) && ((ab + ac) > bc) && ((ac + bc) > ab));
     }
 }

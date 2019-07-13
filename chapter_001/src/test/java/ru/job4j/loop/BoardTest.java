@@ -1,6 +1,7 @@
 package ru.job4j.loop;
 
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -19,7 +20,7 @@ public class BoardTest {
     @Test
     public void when5x5() {
         Board board = new Board();
-        String rsl = board.paint(5,5);
+        String rsl = board.paint(5, 5);
         String ln = System.lineSeparator();
         assertThat(rsl, is(String.format("X X X%s X X %sX X X%s X X %sX X X%s", ln, ln, ln, ln, ln)));
     }
@@ -27,7 +28,7 @@ public class BoardTest {
     @Test
     public void when3x2() {
         Board board = new Board();
-        String rsl = board.paint(3,2);
+        String rsl = board.paint(3, 2);
         String ln = System.lineSeparator();
         assertThat(rsl, is(String.format("X X%s X %s", ln, ln)));
     }

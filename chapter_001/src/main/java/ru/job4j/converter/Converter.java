@@ -2,14 +2,16 @@ package ru.job4j.converter;
 
 /**
  * Class Converter Конвертор валюты.
+ *
  * @author panyuta
- * @since 13.05.2019
  * @version 0.1
+ * @since 13.05.2019
  */
 public class Converter {
 
     /**
      * Конвертируем рубли в евро.
+     *
      * @param value рубли.
      * @return Евро.
      */
@@ -19,6 +21,7 @@ public class Converter {
 
     /**
      * Конвертируем рубли в доллары.
+     *
      * @param value рубли.
      * @return Доллары
      */
@@ -28,6 +31,7 @@ public class Converter {
 
     /**
      * Конвертируем евро в рубли.
+     *
      * @param value евро.
      * @return Рубли
      */
@@ -37,6 +41,7 @@ public class Converter {
 
     /**
      * Конвертируем доллары в рубли.
+     *
      * @param value доллары.
      * @return Рубли
      */

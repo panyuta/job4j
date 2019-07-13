@@ -1,17 +1,18 @@
 package ru.job4j.tracker;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Random;
 
 /**
  * @version $Id$
  * @since 0.1
  */
 public class Tracker {
+    private static final Random RANDOM = new Random();
     /**
      * Массив для хранение заявок.
      */
     private final Item[] items = new Item[100];
-    private static final Random random = new Random();
     /**
      * Указатель ячейки для новой заявки.
      */
@@ -23,6 +24,7 @@ public class Tracker {
 
     /**
      * Метод реализаущий добавление заявки в хранилище
+     *
      * @param item новая заявка
      */
     public Item add(Item item) {
@@ -34,16 +36,17 @@ public class Tracker {
     /**
      * Метод генерирует уникальный ключ для заявки.
      * Так как у заявки нет уникальности полей, имени и описание. Для идентификации нам нужен уникальный ключ.
+     *
      * @return Уникальный ключ.
      */
     private String generateId() {
-        return String.valueOf(System.currentTimeMillis() + random.nextInt(200));
+        return String.valueOf(System.currentTimeMillis() + RANDOM.nextInt(200));
     }
 
     public Item findById(String id) {
         Item result = null;
-        for(Item item : this.items) {
-            if(item.getId().equals(id)) {
+        for (Item item : this.items) {
+            if (item.getId().equals(id)) {
                 result = item;
                 break;
             }
@@ -90,7 +93,7 @@ public class Tracker {
     public boolean replace(String id, Item item) {
         boolean result = false;
         for (int i = 0; i < this.items.length; i++) {
-            if(this.items[i].getId().equals(id)) {
+            if (this.items[i].getId().equals(id)) {
                 this.items[i] = item;
                 result = true;
                 break;

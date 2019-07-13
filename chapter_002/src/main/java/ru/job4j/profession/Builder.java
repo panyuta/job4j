@@ -11,5 +11,6 @@ public class Builder extends Engineer {
         this.scope = scope;
     }
 
-    public void build(Building building) {}
+    public void build(Building building) {
+    }
 }
